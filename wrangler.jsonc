@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cf-error-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+
+  // Attach this worker to your zone. Replace with your actual domain.
+  // Wildcard covers every path on the site.
+  "routes": [
+    {
+      "pattern": "doughmination.co.uk/*",
+      "zone_name": "doughmination.co.uk"
+    }
+  ]
+}
