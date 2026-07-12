@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "wrangler deploy && bun run routes",
+    "deploy:worker": "wrangler deploy",
+    "routes": "bun run scripts/attach-all-zones.ts",
     "tail": "wrangler tail"
   },
   "devDependencies": {

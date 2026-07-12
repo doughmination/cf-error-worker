@@ -3,13 +3,11 @@
   "name": "cf-error-worker",
   "main": "src/index.ts",
   "compatibility_date": "2026-07-01",
+  "account_id": "f87ee4b9600f437b8da1104d077418c3",
 
-  // Attach this worker to your zone. Replace with your actual domain.
-  // Wildcard covers every path on the site.
-  "routes": [
-    {
-      "pattern": "doughmination.co.uk/*",
-      "zone_name": "doughmination.co.uk"
-    }
-  ]
+  // Routes are NOT hardcoded here. Cloudflare requires every route to name a
+  // zone, so instead of listing each domain we attach the worker to every zone
+  // in the account with `bun run routes` (see scripts/attach-all-zones.ts).
+  // That covers all current domains and any you add later.
+  "routes": []
 }
