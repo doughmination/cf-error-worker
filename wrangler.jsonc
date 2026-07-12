@@ -9,5 +9,11 @@
   // zone, so instead of listing each domain we attach the worker to every zone
   // in the account with `bun run routes` (see scripts/attach-all-zones.ts).
   // That covers all current domains and any you add later.
-  "routes": []
+  "routes": [],
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": false
+    }
+  }
 }
